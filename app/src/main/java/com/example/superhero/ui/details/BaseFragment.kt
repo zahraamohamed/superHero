@@ -1,4 +1,4 @@
-package com.example.superhero.ui.detailsFragment
+package com.example.superhero.ui.details
 
 import android.os.Bundle
 import android.view.LayoutInflater

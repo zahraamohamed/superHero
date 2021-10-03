@@ -2,7 +2,7 @@ package com.example.superhero.model.network
 
 import android.util.Log
 import com.example.superhero.model.Status
-import com.example.superhero.model.responce.SuperHeroResponce
+import com.example.superhero.model.responce.SuperheroResponce
 import com.example.superhero.util.Constant
 import com.google.gson.Gson
 import okhttp3.HttpUrl
@@ -20,7 +20,7 @@ object Client {
         .addPathSegment("/api/${Constant.KEY}/1")
         .build()
 
-    fun makeSuperHeroRequest(): Status<SuperHeroResponce> {
+    fun makeSuperHeroRequest(): Status<SuperheroResponce> {
 
         val request = Request.Builder().url(superHeroUrl).build()
         val response = okHttpClient.newCall(request).execute()
@@ -28,7 +28,7 @@ object Client {
         return if (response.isSuccessful) {
             val parserResponse = gson.fromJson(
                 response.body?.string(),
-                SuperHeroResponce::class.java
+                SuperheroResponce::class.java
             )
             Status.Success(parserResponse)
         } else {
