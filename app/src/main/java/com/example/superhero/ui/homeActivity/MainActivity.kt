@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.superhero.R
 import com.example.superhero.model.responce.*
-import com.example.superhero.ui.homeActivity.InfoSuccess.IMainView
+import com.example.superhero.ui.IMainView
 
 class MainActivity : AppCompatActivity() , IMainView {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,31 +12,17 @@ class MainActivity : AppCompatActivity() , IMainView {
         setContentView(R.layout.activity_main)
     }
 
-    override fun onSuperheroResponceInfoSuccess(superheroResponce: SuperheroResponce) {
+    override fun onSuperheroResponseSuccess(superheroResponse: SuperHeroResponce) {
         TODO("Not yet implemented")
     }
 
-    override fun onAppearanceInfoSuccess(appearance: Appearance) {
+    override fun bindData(data: SuperHeroResponce) {
         TODO("Not yet implemented")
     }
 
-    override fun onBiographyInfoSuccess(biography: Biography) {
+    override fun hideAllViews() {
         TODO("Not yet implemented")
     }
 
-    override fun onConnectionsInfoSuccess(connections: Connections) {
-        TODO("Not yet implemented")
-    }
 
-    override fun onImageInfoSuccess(image: Image) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onPowerStatsInfoSuccess(powerStats: PowerStats) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onWorkInfoSuccess(work: Work) {
-        TODO("Not yet implemented")
-    }
 }
