@@ -10,26 +10,16 @@ import com.example.superhero.databinding.FragmentDetailsBinding
 
 
 class DetailsFragment  : BaseFragment<FragmentDetailsBinding>() {
-
-    override val LOG_TAG: String = "Details_Fragment"
-    override val bindingInflater: (LayoutInflater) ->
-    FragmentDetailsBinding = FragmentDetailsBinding::inflate
-
-    override fun addCallbacks() {}
-    override fun setUp() {}
-
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun setup() {
+        TODO("Not yet implemented")
     }
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_details, container, false)
+
+    override fun callBack() {
+        TODO("Not yet implemented")
     }
+
+    override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentDetailsBinding
+        get() = TODO("Not yet implemented")
 
 
 }

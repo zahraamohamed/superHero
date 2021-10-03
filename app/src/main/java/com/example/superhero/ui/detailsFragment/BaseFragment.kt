@@ -6,35 +6,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.example.superhero.R
-import com.example.superhero.ui.BaseInterface
 
-abstract class BaseFragment<VB: ViewBinding> : Fragment() , BaseInterface<VB> {
+abstract class BaseFragment<VB : ViewBinding> : Fragment() {
+    private lateinit var _binding: VB
+    protected val binding get() = _binding
+    abstract fun setup()
+    abstract fun callBack()
+    abstract val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> VB
 
-        override var _binding: ViewBinding? = null
-
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-            super.onViewCreated(view, savedInstanceState)
-
-            setUp()
-            addCallbacks()
-        }
-
-        override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                                  savedInstanceState: Bundle? ): View? {
-            _binding = bindingInflater(layoutInflater)
-            return _binding?.root
-        }
-
-        abstract fun addCallbacks()
-
-        fun addFragment(fragment: Fragment){
-            requireActivity()
-                .supportFragmentManager
-                .beginTransaction()
-                .add(R.id.fragment_container, fragment)
-                .addToBackStack(null)
-                .commit()
-        }
-
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        setup()
+        callBack()
+        _binding = inflate(inflater, container, false)
+        return _binding.root
+    }
 }
