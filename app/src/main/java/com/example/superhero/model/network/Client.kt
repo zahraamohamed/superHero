@@ -15,7 +15,7 @@ object Client : IClient {
     private val okHttpClient = OkHttpClient()
     val gson = Gson()
 
-    override fun makeSuperHeroUrl(searchSuperHeroName: String) = HttpUrl.Builder()
+    private fun superHeroUrl(searchSuperHeroName: String) = HttpUrl.Builder()
         .scheme(Constant.SCHEME)
         .host(Constant.HOST)
         .addPathSegment(Constant.API_SEGMENT)
@@ -24,12 +24,11 @@ object Client : IClient {
         .addPathSegment(searchSuperHeroName)
         .build()
 
-    override fun getSuperHeroRequest(searchSuperHeroName: String): Status<SuperheroResponce> {
+    override fun getRequest(searchSuperHeroName: String): Status<SuperheroResponce> {
         val request = Request.Builder()
-            .url(makeSuperHeroUrl(searchSuperHeroName))
+            .url(superHeroUrl(searchSuperHeroName))
             .build()
         val response = okHttpClient.newCall(request).execute()
-
         return responseState.responseStatus(response)
     }
 }

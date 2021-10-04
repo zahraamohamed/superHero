@@ -7,13 +7,11 @@ import com.example.superhero.ui.IMainView
 
 class HomeActivity :BaseActivity<ActivityHomeBinding>() ,IMainView{
 
-    override fun onSuperheroResponseSuccess(superheroResponse: SuperheroResponce) {
+    override fun onSuperheroResponseSuccess(data: SuperheroResponce) {
         TODO("Not yet implemented")
     }
 
-    override fun bindData(data: SuperheroResponce) {
-        TODO("Not yet implemented")
-    }
+
 
     override fun hideAllViews() {
         TODO("Not yet implemented")
