@@ -8,31 +8,28 @@ import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.Request
 
-open class Client(searchName: String) : IClient {
+object Client : IClient {
 
 
-    private lateinit var responseState : IResponse
+    private var responseState = Response()
     private val okHttpClient = OkHttpClient()
     val gson = Gson()
-    private val superHeroUrl = HttpUrl.Builder()
+
+    override fun makeSuperHeroUrl(searchSuperHeroName: String) = HttpUrl.Builder()
         .scheme(Constant.SCHEME)
         .host(Constant.HOST)
-        .addPathSegment("${Constant.PATH_SEGMENT}${Constant.KEY}/${searchName}")
+        .addPathSegment(Constant.API_SEGMENT)
+        .addPathSegment(Constant.ACCESS_TOKEN)
+        .addPathSegment(Constant.SEARCH_SEGMENT)
+        .addPathSegment(searchSuperHeroName)
         .build()
 
-    open fun makeSuperHeroRequest(): Status<SuperheroResponce> {
-
-        val request = Request.Builder().url(superHeroUrl).build()
+    override fun getSuperHeroRequest(searchSuperHeroName: String): Status<SuperheroResponce> {
+        val request = Request.Builder()
+            .url(makeSuperHeroUrl(searchSuperHeroName))
+            .build()
         val response = okHttpClient.newCall(request).execute()
 
-        responseState = Response()
-
         return responseState.responseStatus(response)
-
     }
-
-    override fun getSuperHeroRequest(): Status<SuperheroResponce> {
-        return makeSuperHeroRequest()
-    }
-
 }
