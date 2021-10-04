@@ -3,10 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Kotlin_Corse/superHero/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
-        <entry key="..\:/Kotlin_Corse/superHero/app/src/main/res/layout/fragment_details.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/SuperHero/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/SuperHero/app/src/main/res/layout/fragment_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/phoneApps/superhero/app/src/main/res/drawable/image_design.xml" value="0.26615384615384613" />
+        <entry key="..\:/phoneApps/superhero/app/src/main/res/layout/fragment_details.xml" value="0.264" />
       </map>
     </option>
   </component>
