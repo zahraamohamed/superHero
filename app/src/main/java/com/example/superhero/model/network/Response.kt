@@ -17,5 +17,4 @@ class Response :IResponse{
             Status.Error(response.message)
         }
     }
-
 }

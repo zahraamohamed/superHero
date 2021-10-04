@@ -29,6 +29,6 @@ object Client : IClient {
             .url(superHeroUrl(searchSuperHeroName))
             .build()
         val response = okHttpClient.newCall(request).execute()
-        return responseState.responseStatus(response)
+        return responseState.responseStatus(response = response)
     }
 }
