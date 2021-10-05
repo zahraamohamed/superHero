@@ -10,10 +10,8 @@ import okhttp3.Request
 
 object Client : IClient {
 
-
-    private var responseState = Response()
     private val okHttpClient = OkHttpClient()
-    val gson = Gson()
+    private var responseState = Response()
 
     override fun makeSuperHeroUrl(searchSuperHeroName: String) = HttpUrl.Builder()
         .scheme(Constant.SCHEME)

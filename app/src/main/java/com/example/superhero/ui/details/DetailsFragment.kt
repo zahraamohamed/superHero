@@ -15,7 +15,7 @@ class DetailsFragment  : BaseFragment<FragmentDetailsBinding>() {
     }
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentDetailsBinding
-        get() = TODO("Not yet implemented")
+        get() = FragmentDetailsBinding::inflate
 
 
 }

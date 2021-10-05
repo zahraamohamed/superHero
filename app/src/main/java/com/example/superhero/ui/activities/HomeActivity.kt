@@ -31,7 +31,7 @@ class HomeActivity :BaseActivity<ActivityHomeBinding>() ,IMainView{
     }
 
     override val inflate: (LayoutInflater) -> ActivityHomeBinding
-        get() = TODO("Not yet implemented")
+        get() = ActivityHomeBinding::inflate
 
 
 }

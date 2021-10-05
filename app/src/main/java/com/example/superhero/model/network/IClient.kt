@@ -6,6 +6,5 @@ import okhttp3.HttpUrl
 
 interface IClient {
     fun getSuperHeroRequest(searchSuperHeroName: String): Status<SuperheroResponce>
-
     fun makeSuperHeroUrl(searchSuperHeroName: String): HttpUrl
 }
