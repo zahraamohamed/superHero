@@ -6,4 +6,7 @@ import okhttp3.Response
 
 interface IResponse {
     fun responseStatus(response: Response): Status<SuperheroResponce>
+    fun responseSuccessful(response: Response): Status<SuperheroResponce>
+    fun responseError(response: Response): Status<SuperheroResponce>
 }
+
