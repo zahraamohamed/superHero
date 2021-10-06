@@ -9,10 +9,10 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
 class MainRepository {
+
     fun getInfoSuperHero(searchSuperHeroName: String) = flow<Status<SuperheroResponce>>{
         emit(Status.Loading)
         emit(Client.getRequest(searchSuperHeroName))
     }.flowOn(Dispatchers.IO)
-
 
 }
