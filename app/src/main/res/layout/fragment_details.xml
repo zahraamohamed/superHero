@@ -1,18 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.details.DetailsFragment">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
+>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/super_hero_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/super_hero_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin3x"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt4x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/super_hero_image"
+        tools:text="super hero name" />
+
+
+    <TextView
+        android:id="@+id/background1"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/margin3x"
+        android:background="@drawable/biograohy_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/super_hero_name" />
+
+    <View
+        android:id="@+id/background2"
+        android:layout_width="32dp"
+        android:layout_height="80dp"
+        android:background="@drawable/biography_shape_of_text"
+        app:layout_constraintBottom_toBottomOf="@+id/background1"
+       app:layout_constraintStart_toEndOf="@id/background1" />
+
+    <TextView
+        android:id="@+id/biography_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/padding1x"
+        android:gravity="fill"
+        android:rotation="-90"
+        android:text="@string/biography"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/background2"
+        app:layout_constraintTop_toTopOf="@+id/background2"
+        app:layout_constraintStart_toStartOf="@id/background2"
+        app:layout_constraintEnd_toEndOf="@id/background2"
+         />
+
+    <TextView
+        android:id="@+id/super_hero_place_of_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt2x"
+        android:layout_marginTop="@dimen/margin2x"
+        app:layout_constraintStart_toStartOf="@+id/super_hero_full_name"
+        app:layout_constraintTop_toBottomOf="@+id/super_hero_full_name"
+        tools:text="place of birth" />
+
+    <TextView
+        android:id="@+id/super_hero_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt2x"
+        android:layout_marginTop="@dimen/margin2x"
+        app:layout_constraintStart_toStartOf="@+id/super_hero_full_name"
+        app:layout_constraintTop_toBottomOf="@+id/super_hero_place_of_birth"
+        tools:text="gender" />
+
+    <TextView
+        android:id="@+id/super_hero_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt2x"
+        android:layout_marginStart="@dimen/margin3x"
+        android:layout_marginTop="@dimen/margin3x"
+        app:layout_constraintStart_toStartOf="@+id/background1"
+        app:layout_constraintTop_toTopOf="@+id/background1"
+        tools:text="super hero full name" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/super_hero_weight"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/margin1x"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/txt2x"-->
+<!--        app:layout_constraintBaseline_toBaselineOf="@+id/super_hero_height"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/super_hero_height"-->
+<!--        tools:text="weight" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/super_hero_eye_color"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/margin1x"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/txt2x"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/super_hero_height"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/super_hero_height"-->
+<!--        tools:text="Eye color" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/super_hero_hair_color"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/margin1x"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/txt2x"-->
+<!--        app:layout_constraintBaseline_toBaselineOf="@+id/super_hero_eye_color"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/super_hero_eye_color"-->
+<!--        tools:text="Hair color" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
