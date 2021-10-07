@@ -12,7 +12,6 @@ import com.example.superhero.ui.adapter.HeroAdapter
 class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
     private val presenter = MainPresenter(this)
 
-
     override val inflate: (LayoutInflater) -> ActivityHomeBinding
         get() = ActivityHomeBinding::inflate
 
@@ -21,7 +20,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
 
         binding.apply {
             data.results?.let { result ->
-                heroRecyclerView.adapter = HeroAdapter(result)
+                superHeroes.adapter = HeroAdapter(result)
             }
         }
     }
@@ -44,7 +43,10 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
 
     private fun initRecyclerView() {
         binding.apply {
-            heroRecyclerView.layoutManager = GridLayoutManager(this@HomeActivity, 2)
+            superHeroes.layoutManager = GridLayoutManager(this@HomeActivity, 2)
+            var mStackLayoutManager = StackLayoutManager()
+            superHeroes.layoutManager = mStackLayoutManager
+
         }
     }
 
