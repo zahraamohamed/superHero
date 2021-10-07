@@ -1,6 +1,9 @@
 package com.example.superhero.ui.activities
 
 import android.view.LayoutInflater
+import android.view.View
+import androidx.core.view.children
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.superhero.R
 import com.example.superhero.databinding.ActivityHomeBinding
@@ -16,9 +19,21 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
     override val inflate: (LayoutInflater) -> ActivityHomeBinding
         get() = ActivityHomeBinding::inflate
 
+    override val theme = R.style.Theme_SuperHero
+
+    override fun onLoading() {
+        setVisibility(false)
+
+
+    }
+
+    override fun onError() {
+        setVisibility(false)
+
+    }
 
     override fun onSuperheroResponseSuccess(data: SuperheroResponce) {
-
+        setVisibility(true)
         binding.apply {
             data.results?.let { result ->
                 heroRecyclerView.adapter = HeroAdapter(result)
@@ -26,12 +41,24 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
         }
     }
 
+    override fun setVisibility(visible: Boolean, isLoading: Boolean) {
+        binding.rootLayout.children.forEach { view ->
+            view.isVisible = visible
+        }
+       binding.loading.apply {
+           isVisible = !visible
+           if (isLoading){
+               setAnimation(R.raw.loading)
+           }else {
+               setAnimation(R.raw.loading)
+           }
+           playAnimation()
 
-    override fun hideAllViews() {
+       }
+
+
+
     }
-
-    override val theme: Int
-        get() = R.style.Theme_SuperHero
 
     override fun setup() {
         initPresenter()
@@ -48,9 +75,10 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
         }
     }
 
-
     override fun callBack() {
     }
+
+
 
 
 }
