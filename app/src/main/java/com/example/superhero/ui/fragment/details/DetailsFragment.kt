@@ -9,14 +9,23 @@ import com.example.superhero.R
 import com.example.superhero.databinding.FragmentBiographyBinding
 import com.example.superhero.databinding.FragmentDetailsBinding
 import com.example.superhero.ui.fragment.BaseFragment
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
 class DetailsFragment : BaseFragment<FragmentDetailsBinding>() {
         override fun setup() {
-            TODO("Not yet implemented")
+            showDetailsBottomSheet()
         }
 
-        override fun callBack() {
+    private fun showDetailsBottomSheet() {
+        binding.showBottomSheetButton.setOnClickListener {
+
+            val dialog = BottomSheetDialog(requireContext())
+            val view = layoutInflater.inflate(R.layout.bottom_sheet_dialog, null)
+        }
+    }
+
+    override fun callBack() {
             TODO("Not yet implemented")
         }
 
