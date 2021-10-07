@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.example.superhero.R
 import com.example.superhero.databinding.ItemHeroBinding
 import com.example.superhero.model.responce.Result
-import com.example.superhero.model.responce.SuperheroResponce
+
 
 class HeroAdapter(private val heroList: List<Result>) : RecyclerView.Adapter<HeroAdapter.HeroHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroHolder {

@@ -1,8 +1,10 @@
 package com.example.superhero.presenter
 
+import androidx.appcompat.view.menu.BaseMenuPresenter
 import com.example.superhero.model.Status
 import com.example.superhero.model.repository.MainRepository
 import com.example.superhero.ui.IMainView
+
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
@@ -15,10 +17,9 @@ class MainPresenter(private val view: IMainView) {
             repository.getInfoSuperHero(searchHeroName).collect { response ->
                 when (response) {
                     is Status.Success -> view.onSuperheroResponseSuccess(data = response.responseData)
-            }
-        }
-    }
+                }
+           }
+       }
+   }
 }
 
-
-}
