@@ -3,14 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/hp/AndroidStudioProjects/SuperHero/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/SuperHero/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/SuperHero/app/src/main/res/layout/fragment_biography.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/SuperHero/app/src/main/res/layout/fragment_details.xml" value="0.4" />
-        <entry key="..\:/superHero/app/src/main/res/layout/activity_home.xml" value="0.23229166666666667" />
-        <entry key="..\:/superHero/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.264" />
-        <entry key="..\:/superHero/app/src/main/res/layout/fragment_biography.xml" value="0.23229166666666667" />
-        <entry key="..\:/superHero/app/src/main/res/layout/fragment_details.xml" value="0.264" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/SuperHero/app/src/main/res/layout/fragment_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/karrar/Desktop/superHero/app/src/main/res/drawable/rounded.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/karrar/Desktop/superHero/app/src/main/res/layout/activity_home.xml" value="0.209375" />
+        <entry key="..\:/Users/karrar/Desktop/superHero/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.209375" />
+        <entry key="..\:/Users/karrar/Desktop/superHero/app/src/main/res/layout/fragment_biography.xml" value="0.209375" />
+        <entry key="..\:/Users/karrar/Desktop/superHero/app/src/main/res/layout/fragment_details.xml" value="0.209375" />
       </map>
     </option>
   </component>
