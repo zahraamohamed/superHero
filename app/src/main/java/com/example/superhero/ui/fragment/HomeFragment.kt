@@ -37,13 +37,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     override fun callBack() {
-        binding.test.setOnClickListener {
-            activity?.let {
-                it.supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container, DetailsFragment())
-                addToBackStack(null)
-            }.commit()
-            }
-        }
+//        binding.test.setOnClickListener {
+//            activity?.let {
+//                it.supportFragmentManager.beginTransaction().apply {
+//                replace(R.id.fragment_container, DetailsFragment())
+//                addToBackStack(null)
+//            }.commit()
+//            }
+//        }
+        addFragment(DetailsFragment())
     }
 }

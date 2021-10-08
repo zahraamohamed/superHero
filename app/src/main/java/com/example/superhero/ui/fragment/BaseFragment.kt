@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.example.superhero.R
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     private lateinit var _binding: VB
@@ -23,5 +24,14 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         setup()
         callBack()
         return _binding.root
+    }
+
+    fun addFragment(fragment: Fragment){
+        requireActivity()
+            .supportFragmentManager
+            .beginTransaction()
+            .add(R.id.fragment_container, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }
