@@ -9,10 +9,11 @@ import com.bumptech.glide.Glide
 import com.example.superhero.R
 import com.example.superhero.databinding.ItemHeroBinding
 import com.example.superhero.model.responce.Result
+import com.example.superhero.model.responce.SuperheroResponce
 
 
 class HeroAdapter(private val heroList: List<Result>)
-    : RecyclerView.Adapter<HeroAdapter.HeroHolder>() {
+    : BaseAdapter<Result>(heroList) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroHolder {
         val itemView = LayoutInflater.from(parent.context)
@@ -20,18 +21,25 @@ class HeroAdapter(private val heroList: List<Result>)
         return HeroHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: HeroHolder, position: Int) {
+    override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
         val currentHero = heroList[position]
+        if (holder is HeroHolder ) bindData(holder , currentHero)
+
+    }
+    private fun bindData(holder:HeroHolder,result:Result){
         holder.binding.apply {
-            heroName.text = currentHero.name
-            Glide.with(root.context).load(currentHero.image?.url)
+            heroName.text = result.name
+            Glide.with(root.context).load(result.image?.url)
                 .into(heroImage)
         }
     }
 
-    override fun getItemCount(): Int = heroList.size
 
-    class HeroHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class HeroHolder(itemView: View) :BaseViewHolder(itemView) {
         val binding = ItemHeroBinding.bind(itemView)
     }
+
+
+
+
 }
