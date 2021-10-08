@@ -1,5 +1,6 @@
 package com.example.superhero.ui.fragment
 
+import android.annotation.SuppressLint
 import android.text.TextUtils.replace
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import com.example.superhero.model.responce.SuperheroResponce
 import com.example.superhero.presenter.MainPresenter
 import com.example.superhero.ui.IMainView
 import com.example.superhero.ui.adapter.HeroAdapter
+import com.example.superhero.ui.adapter.SliderTransformer
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
@@ -21,7 +23,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     fun onSuperheroResponseSuccess(data: SuperheroResponce) {
         binding.apply {
             data.results?.let { result ->
-                heroRecyclerView.adapter = HeroAdapter(result)
+                superHeroes.adapter = HeroAdapter(result)
             }
         }
     }
@@ -31,9 +33,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
 
+    @SuppressLint("ResourceType")
     private fun initRecyclerView() {
         binding.apply {
-            heroRecyclerView.layoutManager = GridLayoutManager(context, 2)
+            superHeroes.offscreenPageLimit = 2
+            superHeroes.setPageTransformer(SliderTransformer(3))
         }
     }
 

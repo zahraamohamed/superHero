@@ -1,5 +1,6 @@
 package com.example.superhero.ui.activities
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import androidx.core.view.children
 import androidx.core.view.isVisible
@@ -10,6 +11,7 @@ import com.example.superhero.model.responce.SuperheroResponce
 import com.example.superhero.presenter.MainPresenter
 import com.example.superhero.ui.IMainView
 import com.example.superhero.ui.adapter.HeroAdapter
+import com.example.superhero.ui.adapter.SliderTransformer
 import com.example.superhero.ui.fragment.DetailsFragment
 import com.example.superhero.ui.fragment.HomeFragment
 
@@ -30,10 +32,12 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
     }
     override fun onSuccess(data: SuperheroResponce) {
         setVisibility(true)
+
         supportFragmentManager.findFragmentById(R.id.fragment_container)?.apply {
             this as HomeFragment
             onSuperheroResponseSuccess(data)
         }
+
     }
 
     override fun setVisibility(visible: Boolean, isLoading: Boolean) {
@@ -61,6 +65,8 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
             }.commit()
         }
     }
+
+
 
 
 
