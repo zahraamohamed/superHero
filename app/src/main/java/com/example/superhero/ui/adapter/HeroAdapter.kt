@@ -1,5 +1,6 @@
 package com.example.superhero.ui.adapter
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,9 +11,12 @@ import com.example.superhero.databinding.ItemHeroBinding
 import com.example.superhero.model.responce.Result
 
 
-class HeroAdapter(private val heroList: List<Result>) : RecyclerView.Adapter<HeroAdapter.HeroHolder>() {
+class HeroAdapter(private val heroList: List<Result>)
+    : RecyclerView.Adapter<HeroAdapter.HeroHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_hero,parent,false)
+        val itemView = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_hero,parent,false)
         return HeroHolder(itemView)
     }
 
@@ -20,9 +24,11 @@ class HeroAdapter(private val heroList: List<Result>) : RecyclerView.Adapter<Her
         val currentHero = heroList[position]
         holder.binding.apply {
             heroName.text = currentHero.name
-            Glide.with(root.context).load(currentHero.image?.url).into(heroImage)
+            Glide.with(root.context).load(currentHero.image?.url)
+                .into(heroImage)
         }
     }
+
     override fun getItemCount(): Int = heroList.size
 
     class HeroHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

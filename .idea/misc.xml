@@ -5,14 +5,18 @@
       <map>
         <entry key="..\:/Users/hp/AndroidStudioProjects/SuperHero/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/SuperHero/app/src/main/res/layout/fragment_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/drawable-v24/circular_progress_bar.xml" value="0.3671875" />
         <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/drawable/biography_shape_of_text.xml" value="0.3671875" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/drawable/card_style.xml" value="0.3828125" />
         <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/drawable/edit_text_style.xml" value="0.36153846153846153" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/drawable/gradient_style.xml" value="0.1" />
         <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.3671875" />
-        <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/drawable/triangle_style.xml" value="0.36153846153846153" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/layout/activity_main.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/layout/fragment_biography.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/layout/fragment_details.xml" value="0.35104166666666664" />
-        <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/layout/item_hero.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/superHero/app/src/main/res/layout/item_hero.xml" value="0.4677716390423573" />
       </map>
     </option>
   </component>
