@@ -1,6 +1,5 @@
 package com.example.superhero.ui.activities
 
-import android.util.Log
 import android.view.LayoutInflater
 import androidx.core.view.isVisible
 import com.example.superhero.R
@@ -8,7 +7,6 @@ import com.example.superhero.databinding.ActivityHomeBinding
 import com.example.superhero.model.responce.SuperheroResponce
 import com.example.superhero.presenter.MainPresenter
 import com.example.superhero.ui.IMainView
-import com.example.superhero.ui.fragment.DetailsFragment
 import com.example.superhero.ui.fragment.HomeFragment
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
@@ -24,13 +22,12 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
     }
 
     override fun onError() {
-        setVisibility(false)
+        setVisibility(visible = false, isLoading = false)
     }
 
 
     override fun bindData(data: SuperheroResponce) {
         setVisibility(true)
-//        Log.i("lazy",data.toString())
 
         supportFragmentManager.findFragmentById(R.id.fragment_container)?.apply {
             this as HomeFragment
@@ -43,9 +40,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
        binding.loading.apply {
            isVisible = !visible
            if (isLoading){
-               setAnimation(R.raw.loading)
+               setAnimation(R.raw.load)
            } else {
-               setAnimation(R.raw.loading)
+               setAnimation(R.raw.error)
            }
            playAnimation()
        }

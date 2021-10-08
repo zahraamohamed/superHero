@@ -61,36 +61,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/search"
         app:layout_constraintTop_toBottomOf="@+id/search"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry"
+        tools:listitem="@layout/item_hero" />
 
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/padding2x"
-        android:layout_marginTop="@dimen/margin4x"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <Button
-        android:id="@+id/test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/hero_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 

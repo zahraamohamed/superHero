@@ -12,5 +12,7 @@
     <color name="whiteGray">#f3f5f7</color>
     <color name="gray">#8A8A8A</color>
     <color name="bgColor">#FAFAFA</color>
+    <color name="red">#840909</color>
+
 
 </resources>

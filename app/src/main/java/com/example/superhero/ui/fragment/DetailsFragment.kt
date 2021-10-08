@@ -21,7 +21,6 @@ class DetailsFragment() : BaseFragment<FragmentDetailsBinding>() {
         val heroItem: Result?
         arguments?.let { bundle ->
             heroItem = bundle.getParcelable("keyy")
-
             binding.apply {
                 heroItem?.apply {
                     superHeroName.text = name

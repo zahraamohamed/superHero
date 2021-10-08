@@ -5,6 +5,7 @@ import com.example.superhero.model.repository.MainRepository
 import com.example.superhero.ui.IMainView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
@@ -12,11 +13,12 @@ class MainPresenter(private val view: IMainView) {
     var repository = MainRepository()
     fun getResult(searchHeroName:String) {
         CoroutineScope(Dispatchers.Main).launch {
-            repository.getInfoSuperHero(searchHeroName).collect { response ->
+            repository.getInfoSuperHero(searchHeroName).catch {
+                view.onError()
+            }.collect { response ->
                 when (response) {
                     is Status.Success -> view.bindData(data = response.responseData)
                     is Status.Loading -> view.onLoading()
-                    is Status.Error -> view.onError()
             }
         }
     }
