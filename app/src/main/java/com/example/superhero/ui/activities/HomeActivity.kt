@@ -1,22 +1,19 @@
 package com.example.superhero.ui.activities
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
-import androidx.core.view.children
 import androidx.core.view.isVisible
-import androidx.recyclerview.widget.GridLayoutManager
 import com.example.superhero.R
 import com.example.superhero.databinding.ActivityHomeBinding
 import com.example.superhero.model.responce.SuperheroResponce
 import com.example.superhero.presenter.MainPresenter
 import com.example.superhero.ui.IMainView
-import com.example.superhero.ui.adapter.HeroAdapter
-import com.example.superhero.ui.adapter.SliderTransformer
+import com.example.superhero.ui.TransferData
 import com.example.superhero.ui.fragment.DetailsFragment
 import com.example.superhero.ui.fragment.HomeFragment
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
  private val presenter= MainPresenter(this)
+
 
     override val inflate: (LayoutInflater) -> ActivityHomeBinding
         get() = ActivityHomeBinding::inflate
@@ -30,14 +27,15 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
     override fun onError() {
         setVisibility(false)
     }
-    override fun onSuccess(data: SuperheroResponce) {
+
+
+    override fun bindData(data: SuperheroResponce) {
         setVisibility(true)
 
         supportFragmentManager.findFragmentById(R.id.fragment_container)?.apply {
             this as HomeFragment
             onSuperheroResponseSuccess(data)
         }
-
     }
 
     override fun setVisibility(visible: Boolean, isLoading: Boolean) {
@@ -55,6 +53,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
 
     override fun setup() {
         presenter.getResult(" ")
+
     }
 
     override fun callBack() {
@@ -65,8 +64,6 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
             }.commit()
         }
     }
-
-
 
 
 

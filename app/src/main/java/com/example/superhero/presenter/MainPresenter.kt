@@ -14,7 +14,7 @@ class MainPresenter(private val view: IMainView) {
         CoroutineScope(Dispatchers.Main).launch {
             repository.getInfoSuperHero(searchHeroName).collect { response ->
                 when (response) {
-                    is Status.Success -> view.onSuccess(data = response.responseData)
+                    is Status.Success -> view.bindData(data = response.responseData)
                     is Status.Loading -> view.onLoading()
                     is Status.Error -> view.onError()
             }
