@@ -55,12 +55,6 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
     }
 
     override fun callBack() {
-        binding.test.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container, DetailsFragment())
-                addToBackStack(null)
-            }.commit()
-        }
     }
 
 

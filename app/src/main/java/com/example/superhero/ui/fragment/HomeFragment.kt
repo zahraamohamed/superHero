@@ -1,6 +1,7 @@
 package com.example.superhero.ui.fragment
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.superhero.R
@@ -11,7 +12,7 @@ import com.example.superhero.ui.ITransferData
 import com.example.superhero.ui.adapter.HeroAdapter
 import com.example.superhero.ui.adapter.SliderTransformer
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>(),ITransferData {
+class HomeFragment : BaseFragment<FragmentHomeBinding>(), ITransferData {
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentHomeBinding
         get() = FragmentHomeBinding::inflate
@@ -19,8 +20,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(),ITransferData {
     fun onSuperheroResponseSuccess(data: SuperheroResponce) {
         binding.apply {
             data.results?.let { result ->
-                superHeroes.adapter = HeroAdapter(result,this@HomeFragment)
-
+                superHeroes.adapter = HeroAdapter(result, this@HomeFragment)
             }
         }
     }
@@ -50,5 +50,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(),ITransferData {
     }
 
     override fun transferData(data: Result) {
-        addFragment(DetailsFragment())    }
+//        Log.i("Karrar_j_d", data.toString())
+        addFragment(DetailsFragment(data))
+    }
 }
