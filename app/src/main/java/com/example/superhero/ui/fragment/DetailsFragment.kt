@@ -7,7 +7,7 @@ import com.example.superhero.databinding.FragmentDetailsBinding
 import com.example.superhero.model.responce.Result
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
-class DetailsFragment() : BaseFragment<FragmentDetailsBinding>(){
+class DetailsFragment() : BaseFragment<FragmentDetailsBinding>() {
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentDetailsBinding
         get() = FragmentDetailsBinding::inflate
@@ -18,30 +18,28 @@ class DetailsFragment() : BaseFragment<FragmentDetailsBinding>(){
     }
 
     private fun initShowView() {
-        val heroItem:Result?
+        val heroItem: Result?
         arguments?.let { bundle ->
-         heroItem = bundle.getParcelable("keyy")
+            heroItem = bundle.getParcelable("keyy")
 
-        binding.apply {
-            heroItem?.apply {
-                superHeroName.text = name
-                superHeroFullName.text = biography?.fullName
-                Glide.with(root.context).load(image?.url)
-                    .into(superHeroImage)
+            binding.apply {
+                heroItem?.apply {
+                    superHeroName.text = name
+                    superHeroFullName.text = biography?.fullName
+                    Glide.with(root.context).load(image?.url)
+                        .into(superHeroImage)
+                }
+
             }
 
         }
-
-        }
     }
-
     private fun initBottomSheet() {
         BottomSheetBehavior.from(binding.bottomSheetSuperHero).apply {
             peekHeight = 200
             state = BottomSheetBehavior.STATE_EXPANDED
         }
     }
-
     override fun callBack() {
     }
 }

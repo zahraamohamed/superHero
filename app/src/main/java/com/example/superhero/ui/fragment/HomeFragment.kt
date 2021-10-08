@@ -37,15 +37,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), IHomeListener {
     }
 
     override fun callBack() {
-//        binding.test.setOnClickListener {
-//            activity?.let {
-//                it.supportFragmentManager.beginTransaction().apply {
-//                replace(R.id.fragment_container, DetailsFragment())
-//                addToBackStack(null)
-//            }.commit()
-//            }
-//        }
-
     }
 
     override fun onClickItem(data: Result) {
@@ -53,7 +44,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), IHomeListener {
         detailsFragment.arguments = Bundle().apply {
             putParcelable("keyy",data)
         }
-//        Log.i("Karrar_j_d", data.toString())
-        addFragment(DetailsFragment())
+        addFragment(detailsFragment)
     }
 }
