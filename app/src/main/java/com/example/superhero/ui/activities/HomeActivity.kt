@@ -1,5 +1,6 @@
 package com.example.superhero.ui.activities
 
+import android.util.Log
 import android.view.LayoutInflater
 import androidx.core.view.isVisible
 import com.example.superhero.R
@@ -29,6 +30,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
 
     override fun bindData(data: SuperheroResponce) {
         setVisibility(true)
+//        Log.i("lazy",data.toString())
 
         supportFragmentManager.findFragmentById(R.id.fragment_container)?.apply {
             this as HomeFragment
