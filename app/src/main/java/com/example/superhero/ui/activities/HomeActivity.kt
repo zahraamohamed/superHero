@@ -1,7 +1,6 @@
 package com.example.superhero.ui.activities
 
 import android.view.LayoutInflater
-import android.view.View
 import androidx.core.view.children
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
@@ -11,10 +10,11 @@ import com.example.superhero.model.responce.SuperheroResponce
 import com.example.superhero.presenter.MainPresenter
 import com.example.superhero.ui.IMainView
 import com.example.superhero.ui.adapter.HeroAdapter
+import com.example.superhero.ui.fragment.DetailsFragment
+import com.example.superhero.ui.fragment.HomeFragment
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
-    private val presenter = MainPresenter(this)
-
+ private val presenter= MainPresenter(this)
 
     override val inflate: (LayoutInflater) -> ActivityHomeBinding
         get() = ActivityHomeBinding::inflate
@@ -23,59 +23,43 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
 
     override fun onLoading() {
         setVisibility(false)
-
-
     }
 
     override fun onError() {
         setVisibility(false)
-
     }
-
-    override fun onSuperheroResponseSuccess(data: SuperheroResponce) {
+    override fun onSuccess(data: SuperheroResponce) {
         setVisibility(true)
-        binding.apply {
-            data.results?.let { result ->
-                heroRecyclerView.adapter = HeroAdapter(result)
-            }
+        supportFragmentManager.findFragmentById(R.id.fragment_container)?.apply {
+            this as HomeFragment
+            onSuperheroResponseSuccess(data)
         }
     }
 
     override fun setVisibility(visible: Boolean, isLoading: Boolean) {
-        binding.rootLayout.children.forEach { view ->
-            view.isVisible = visible
-        }
+      binding.fragmentContainer.isVisible = visible
        binding.loading.apply {
            isVisible = !visible
            if (isLoading){
                setAnimation(R.raw.loading)
-           }else {
+           } else {
                setAnimation(R.raw.loading)
            }
            playAnimation()
-
        }
-
-
-
     }
 
     override fun setup() {
-        initPresenter()
-        initRecyclerView()
-    }
-
-    private fun initPresenter() {
-        presenter.getResult("a")
-    }
-
-    private fun initRecyclerView() {
-        binding.apply {
-            heroRecyclerView.layoutManager = GridLayoutManager(this@HomeActivity, 2)
-        }
+        presenter.getResult(" ")
     }
 
     override fun callBack() {
+        binding.test.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragment_container, DetailsFragment())
+                addToBackStack(null)
+            }.commit()
+        }
     }
 
 

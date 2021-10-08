@@ -19,9 +19,9 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        _binding = inflate(inflater, container, false)
         setup()
         callBack()
-        _binding = inflate(inflater, container, false)
         return _binding.root
     }
 }

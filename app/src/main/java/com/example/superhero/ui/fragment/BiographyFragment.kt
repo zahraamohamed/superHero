@@ -1,4 +1,4 @@
-package com.example.superhero.ui.fragment.biography
+package com.example.superhero.ui.fragment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
