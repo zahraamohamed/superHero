@@ -13,10 +13,10 @@ class MainPresenter(private val view: IMainView) {
     fun getResult(searchHeroName:String) {
         CoroutineScope(Dispatchers.Main).launch {
             repository.getInfoSuperHero(searchHeroName).collect { response ->
-
                 when (response) {
                     is Status.Success -> view.onSuperheroResponseSuccess(data = response.responseData)
-
+                    is Status.Loading -> view.onLoading()
+                    is Status.Error -> view.onError()
             }
         }
     }
