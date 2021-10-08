@@ -7,13 +7,11 @@ import com.example.superhero.databinding.ActivityHomeBinding
 import com.example.superhero.model.responce.SuperheroResponce
 import com.example.superhero.presenter.MainPresenter
 import com.example.superhero.ui.IMainView
-import com.example.superhero.ui.TransferData
 import com.example.superhero.ui.fragment.DetailsFragment
 import com.example.superhero.ui.fragment.HomeFragment
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
  private val presenter= MainPresenter(this)
-
 
     override val inflate: (LayoutInflater) -> ActivityHomeBinding
         get() = ActivityHomeBinding::inflate

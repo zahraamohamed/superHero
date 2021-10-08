@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.superhero.R
 import com.example.superhero.databinding.FragmentHomeBinding
+import com.example.superhero.model.responce.Result
 import com.example.superhero.model.responce.SuperheroResponce
-import com.example.superhero.ui.TransferData
+import com.example.superhero.ui.ITransferData
 import com.example.superhero.ui.adapter.HeroAdapter
 import com.example.superhero.ui.adapter.SliderTransformer
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>() {
+class HomeFragment : BaseFragment<FragmentHomeBinding>(),ITransferData {
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentHomeBinding
         get() = FragmentHomeBinding::inflate
@@ -18,7 +19,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     fun onSuperheroResponseSuccess(data: SuperheroResponce) {
         binding.apply {
             data.results?.let { result ->
-                superHeroes.adapter = HeroAdapter(result)
+                superHeroes.adapter = HeroAdapter(result,this@HomeFragment)
 
             }
         }
@@ -45,6 +46,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 //            }.commit()
 //            }
 //        }
-        addFragment(DetailsFragment())
+
     }
+
+    override fun transferData(data: Result) {
+        addFragment(DetailsFragment())    }
 }
