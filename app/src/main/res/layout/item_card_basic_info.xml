@@ -17,7 +17,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
         android:text="Spider - Man"
-        android:textColor="@color/black"
+        android:textColor="@color/secondColor"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
