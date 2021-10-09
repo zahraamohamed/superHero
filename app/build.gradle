@@ -1,12 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
 
     buildFeatures {
         viewBinding true
+        //noinspection DataBindingWithoutKapt
+        dataBinding true
     }
 
     compileSdk 31
@@ -52,6 +55,8 @@ dependencies {
     implementation 'com.airbnb.android:lottie:4.1.0'
 
     //libraries
+
+    implementation 'com.github.iammert:MultiSearchView:0.3'
 
     implementation "com.squareup.okhttp3:okhttp:4.9.1"
     implementation "com.google.code.gson:gson:2.8.8"

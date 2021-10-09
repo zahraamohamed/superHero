@@ -7,11 +7,32 @@
     android:background="@color/bgColor"
     tools:context=".ui.activities.HomeActivity">
 
+    <com.iammert.library.ui.multisearchviewlib.MultiSearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:elevation="1dp"
+        android:background="@drawable/edit_text_style"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:minHeight="48dp"
+        android:paddingHorizontal="15dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:searchTextStyle="@style/SearchTextStyle" />
+
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:name="com.example.superhero.ui.fragment.HomeFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/loading"
@@ -19,11 +40,11 @@
         android:layout_height="300dp"
         android:layout_marginHorizontal="@dimen/padding2x"
         android:layout_marginTop="@dimen/margin4x"
-        app:lottie_loop="true"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_loop="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

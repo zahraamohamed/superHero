@@ -1,5 +1,6 @@
 package com.example.superhero.presenter
 
+import android.content.Context
 import com.example.superhero.model.Status
 import com.example.superhero.model.repository.MainRepository
 import com.example.superhero.ui.IMainView
