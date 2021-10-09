@@ -5,5 +5,6 @@ import com.example.superhero.model.responce.SuperheroResponce
 import okhttp3.HttpUrl
 
 interface IClient {
-    fun getRequest(searchSuperHeroName: String): Status<SuperheroResponce>
+
+    fun getRequest(queryHeroName: String): Status<SuperheroResponce>
 }

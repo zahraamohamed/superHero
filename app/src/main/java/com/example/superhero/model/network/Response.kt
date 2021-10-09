@@ -8,7 +8,6 @@ import okhttp3.Response
 class Response : IResponse {
 
     val gson = Gson()
-
     override fun responseStatus(response: Response): Status<SuperheroResponce> {
         return if (response.isSuccessful) {
             responseSuccessful(response)
@@ -25,5 +24,4 @@ class Response : IResponse {
     )
 
     override fun responseError(response: Response) = Status.Error(response.message)
-
 }

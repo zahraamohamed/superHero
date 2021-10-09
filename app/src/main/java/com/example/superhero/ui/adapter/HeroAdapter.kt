@@ -1,6 +1,5 @@
 package com.example.superhero.ui.adapter
 
-
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +9,6 @@ import com.example.superhero.R
 import com.example.superhero.databinding.ItemHeroBinding
 import com.example.superhero.model.responce.Result
 import com.example.superhero.ui.IHomeListener
-
 
 class HeroAdapter(private val heroList: List<Result>, listener: IHomeListener) :
     BaseAdapter<Result>(heroList, listener) {
@@ -47,10 +45,7 @@ class HeroAdapter(private val heroList: List<Result>, listener: IHomeListener) :
         }
     }
 
-
     class HeroHolder(itemView: View) : BaseViewHolder(itemView) {
         val binding = ItemHeroBinding.bind(itemView)
     }
-
-
 }

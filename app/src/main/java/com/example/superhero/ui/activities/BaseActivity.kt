@@ -8,10 +8,10 @@ import androidx.viewbinding.ViewBinding
 abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     private lateinit var _binding: VB
     abstract val theme: Int
-    abstract fun setup()
-    abstract fun callBack()
     abstract val inflate: (LayoutInflater) -> VB
     protected val binding get() = _binding
+    abstract fun setup()
+    abstract fun callBack()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

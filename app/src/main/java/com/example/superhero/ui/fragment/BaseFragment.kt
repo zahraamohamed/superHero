@@ -26,7 +26,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         return _binding.root
     }
 
-    fun addFragment(fragment: Fragment){
+    fun addFragment(fragment: Fragment) {
         requireActivity()
             .supportFragmentManager
             .beginTransaction()

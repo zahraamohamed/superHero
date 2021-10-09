@@ -5,33 +5,30 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.example.superhero.databinding.FragmentDetailsBinding
 import com.example.superhero.model.responce.Result
-import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.example.superhero.util.Constant
 
-class DetailsFragment() : BaseFragment<FragmentDetailsBinding>() {
+class DetailsFragment : BaseFragment<FragmentDetailsBinding>() {
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentDetailsBinding
         get() = FragmentDetailsBinding::inflate
 
     override fun setup() {
-        initShowView()
+        showHeroInDetailsFragment()
     }
 
-    private fun initShowView() {
+    private fun showHeroInDetailsFragment() {
+
         val heroItem: Result?
         arguments?.let { bundle ->
-            heroItem = bundle.getParcelable("keyy")
+            heroItem = bundle.getParcelable(Constant.RECYCLER_DATA_KEY)
             binding.apply {
                 heroItem?.apply {
-
                     Glide.with(root.context).load(image?.url)
                         .into(heroImage)
                 }
-
             }
-
         }
     }
-
 
     override fun callBack() {
     }

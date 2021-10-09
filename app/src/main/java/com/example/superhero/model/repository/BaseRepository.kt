@@ -9,5 +9,5 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
 abstract class BaseRepository {
-    abstract fun getInfoSuperHero(query: String):Flow<Status<SuperheroResponce>>
+    abstract fun getHeroData(query: String):Flow<Status<SuperheroResponce>>
 }

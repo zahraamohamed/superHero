@@ -9,6 +9,6 @@ abstract class BaseAdapter<T>(private val list:List<T>, val listener:IHomeListen
 
     override fun getItemCount(): Int = list.size
 
-    abstract class BaseViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){}
+    abstract class BaseViewHolder(itemView:View):RecyclerView.ViewHolder(itemView)
 
 }

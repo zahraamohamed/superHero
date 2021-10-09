@@ -3,17 +3,14 @@ package com.example.superhero.model.network
 import com.example.superhero.model.Status
 import com.example.superhero.model.responce.SuperheroResponce
 import com.example.superhero.util.Constant
-import com.google.gson.Gson
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.Request
 
 object Client : IClient {
 
-
     private var responseState = Response()
     private val okHttpClient = OkHttpClient()
-    val gson = Gson()
 
     private fun superHeroUrl(searchSuperHeroName: String) = HttpUrl.Builder()
         .scheme(Constant.SCHEME)
@@ -24,9 +21,9 @@ object Client : IClient {
         .addPathSegment(searchSuperHeroName)
         .build()
 
-    override fun getRequest(searchSuperHeroName: String): Status<SuperheroResponce> {
+    override fun getRequest(queryHeroName: String): Status<SuperheroResponce> {
         val request = Request.Builder()
-            .url(superHeroUrl(searchSuperHeroName))
+            .url(superHeroUrl(queryHeroName))
             .build()
         val response = okHttpClient.newCall(request).execute()
         return responseState.responseStatus(response = response)
