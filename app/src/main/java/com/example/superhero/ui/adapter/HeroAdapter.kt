@@ -1,6 +1,7 @@
 package com.example.superhero.ui.adapter
 
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,13 +27,21 @@ class HeroAdapter(private val heroList: List<Result>, listener: IHomeListener) :
 
     }
 
+    @SuppressLint("SetTextI18n")
     private fun bindData(holder: HeroHolder, result: Result) {
         holder.binding.apply {
-            heroName.text = result.name
+            fullName.text = result.name
+            name.text = result.biography?.fullName
+            strength.text = "${result.powerstats?.strength}/100"
+            speed.text = "${result.powerstats?.speed}/100"
+            power.text = "${result.powerstats?.power}/100"
+
             Glide.with(root.context).load(result.image?.url)
+                .placeholder(R.drawable.elev_shape)
                 .into(heroImage)
+
             cardRecycler.setOnClickListener {
-                listener.onClickItem(result)
+                listener.onClickItem(data = result)
 
             }
         }
