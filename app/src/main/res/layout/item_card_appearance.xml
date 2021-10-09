@@ -28,7 +28,7 @@
         android:layout_width="80dp"
         android:layout_height="130dp"
         android:layout_marginEnd="55dp"
-        android:src="@drawable/human_body_4"
+        android:src="@drawable/human_body_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
