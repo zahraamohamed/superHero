@@ -11,9 +11,8 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
-        <item name="cornerSizeBottomRight">75dp</item>
-        <item name="cornerSizeBottomLeft">75dp</item>
-        <item name="cornerFamilyTopRight">rounded</item>
+    <style name="ShapeAppearanceOverlay.App.SelectedCornerCut" parent="">
+        <item name="cornerSizeBottomRight">50dp</item>
+        <item name="cornerFamilyBottomRight">cut</item>
     </style>
 </resources>
