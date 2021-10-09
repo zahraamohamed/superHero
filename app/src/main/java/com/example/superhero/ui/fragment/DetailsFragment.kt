@@ -13,7 +13,6 @@ class DetailsFragment() : BaseFragment<FragmentDetailsBinding>() {
         get() = FragmentDetailsBinding::inflate
 
     override fun setup() {
-        initBottomSheet()
         initShowView()
     }
 
@@ -23,22 +22,17 @@ class DetailsFragment() : BaseFragment<FragmentDetailsBinding>() {
             heroItem = bundle.getParcelable("keyy")
             binding.apply {
                 heroItem?.apply {
-                    superHeroName.text = name
-                    superHeroFullName.text = biography?.fullName
+
                     Glide.with(root.context).load(image?.url)
-                        .into(superHeroImage)
+                        .into(heroImage)
                 }
 
             }
 
         }
     }
-    private fun initBottomSheet() {
-        BottomSheetBehavior.from(binding.bottomSheetSuperHero).apply {
-            peekHeight = 200
-            state = BottomSheetBehavior.STATE_EXPANDED
-        }
-    }
+
+
     override fun callBack() {
     }
 }
