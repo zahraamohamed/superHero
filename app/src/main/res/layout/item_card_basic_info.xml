@@ -38,12 +38,12 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="5dp"
+        android:layout_marginHorizontal="10dp"
         android:lineHeight="20dp"
         android:text="Scarsdale, Arizona"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:lineHeight="20dp"
         android:text="Place Of Birth"
         android:textStyle="bold"
@@ -65,12 +65,12 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="5dp"
+        android:layout_marginHorizontal="10dp"
         android:lineHeight="20dp"
         android:text="It was the first appearance"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="@+id/textView11"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:lineHeight="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:text="First Appearance"
         android:textColor="@color/black"
         android:textSize="17sp"
