@@ -39,8 +39,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
     override fun setVisibility(visible: Boolean, isLoading: Boolean) {
 
         binding.fragmentContainer.isVisible = visible
-        binding.loading.apply {
-        }
+
         binding.apply {
             search.isVisible = !visible
             loading.isVisible = !visible
@@ -50,9 +49,8 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
                 loading.setAnimation(R.raw.load)
 
             } else {
-                loading.setAnimation(R.raw.error)
                 search.isVisible = visible
-
+                loading.setAnimation(R.raw.error)
             }
             loading.playAnimation()
         }
