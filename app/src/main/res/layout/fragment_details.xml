@@ -20,94 +20,450 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="290dp"
-            android:paddingBottom="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="80dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/card_transparent_style" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginHorizontal="50dp"
-                android:layout_marginTop="35dp"
                 android:background="@drawable/card_transparent_style"
-
-                />
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/view_pager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/card_style"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/constraintLayout6"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginHorizontal="20dp"-->
-<!--                android:layout_marginTop="50dp"-->
-<!--                android:background="@drawable/card_style"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginHorizontal="85dp"
+                android:background="@drawable/card_transparent_style"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/textView7"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginHorizontal="20dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginTop="15dp"-->
-<!--                    android:text="Spider - Man"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="22sp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_card_powerstats"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginHorizontal="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/card_style">
 
-<!--                <TextView-->
-<!--                    android:id="@+id/textView6"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="2dp"-->
-<!--                    android:text="Scarsdale, Arizona"-->
-<!--                    android:textStyle="bold"-->
-<!--                    app:layout_constraintStart_toStartOf="@+id/textView7"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/textView7"-->
-<!--                    tools:ignore="HardcodedText" />-->
+                <TextView
+                    android:id="@+id/textTitlePowerstats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Powerstats"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/textView8"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginHorizontal="30dp"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:textSize="14sp"-->
-<!--                    android:lineHeight="20dp"-->
-<!--                    android:text="Character relatives are Marlo Chandler-Jones (wife), Polly (aunt), Mrs. Chandler (mother-in-law), Keith Chandler, Ray Chandler, three unidentified others (brothers-in-law), unidentified father (deceased), Jackie Shorr (alleged mother  unconfirmed)"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="@+id/textView6"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/textView6"-->
-<!--                    tools:ignore="HardcodedText" />-->
+                <TextView
+                    android:id="@+id/textTitleSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineHeight="20dp"
+                    android:text="Speed"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/progressValueSpeed"
+                    app:layout_constraintStart_toStartOf="@+id/progressValueSpeed"
+                    app:layout_constraintTop_toBottomOf="@+id/progressValueSpeed"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textTitlePower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineHeight="20dp"
+                    android:text="Power"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/progressValuePower"
+                    app:layout_constraintStart_toStartOf="@+id/progressValuePower"
+                    app:layout_constraintTop_toBottomOf="@+id/progressValuePower"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textTitleStrengt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineHeight="20dp"
+                    android:text="Strength"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/progressValueStrength"
+                    app:layout_constraintStart_toStartOf="@+id/progressValueStrength"
+                    app:layout_constraintTop_toBottomOf="@+id/progressValueStrength"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progressValueSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginTop="55dp"
+                    android:progress="60"
+                    app:cpb_background_progressbar_color="#ccc"
+                    app:cpb_background_progressbar_width="10dp"
+                    app:cpb_progress_max="100"
+                    app:indicatorColor="@color/secondColor"
+                    app:layout_constraintEnd_toStartOf="@+id/progressValuePower"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textTitlePowerstats"
+                    app:trackColor="#EAEAEA"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progressValueStrength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="35dp"
+                    android:progress="45"
+                    app:cpb_background_progressbar_color="#ccc"
+                    app:cpb_background_progressbar_width="10dp"
+                    app:cpb_progress_max="100"
+                    app:cpb_progressbar_color="@color/secondColor"
+                    app:cpb_progressbar_width="5dp"
+                    app:indicatorColor="@color/secondColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/progressValuePower"
+                    app:layout_constraintTop_toTopOf="@+id/progressValueSpeed"
+                    app:trackColor="#EAEAEA"
+                    tools:ignore="HardcodedText" />
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/progressValuePower"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    app:cpb_background_progressbar_color="#EFEFEF"
+                    app:cpb_background_progressbar_width="5dp"
+                    app:cpb_progress="80"
+                    app:cpb_progress_max="100"
+                    app:cpb_progressbar_color="@color/secondColor"
+                    app:layout_constraintBottom_toBottomOf="@+id/progressValueSpeed"
+                    app:layout_constraintEnd_toStartOf="@+id/progressValueStrength"
+                    app:layout_constraintStart_toEndOf="@+id/progressValueSpeed"
+                    app:trackColor="#EAEAEA" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_card_appearance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginHorizontal="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/card_style">
+
+                <ImageView
+                    android:id="@+id/imageHumanBody"
+                    android:layout_width="80dp"
+                    android:layout_height="130dp"
+                    android:layout_marginEnd="45dp"
+                    android:src="@drawable/human_body_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.47" />
+
+                <ImageView
+                    android:id="@+id/imageLineVertical"
+                    android:layout_width="20dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageHumanBody"
+                    app:layout_constraintEnd_toStartOf="@+id/imageHumanBody"
+                    app:layout_constraintTop_toTopOf="@+id/imageHumanBody"
+                    app:layout_constraintVertical_bias="0.58" />
+
+                <ImageView
+                    android:id="@+id/imageLineHorizantal"
+                    android:layout_width="80dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_line_horizantal"
+                    app:layout_constraintEnd_toEndOf="@+id/imageHumanBody"
+                    app:layout_constraintStart_toStartOf="@+id/imageHumanBody"
+                    app:layout_constraintTop_toBottomOf="@+id/imageHumanBody" />
+
+                <TextView
+                    android:id="@+id/titleAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Appearance"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:lineHeight="20dp"
+                    android:text="203 cm"
+                    android:textColor="@color/black"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageLineVertical"
+                    app:layout_constraintEnd_toStartOf="@+id/imageLineVertical"
+                    app:layout_constraintTop_toTopOf="@+id/imageLineVertical"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="20dp"
+                    android:text="441 kg"
+                    android:textColor="@color/black"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageLineHorizantal"
+                    app:layout_constraintStart_toStartOf="@+id/imageLineHorizantal"
+                    app:layout_constraintTop_toBottomOf="@+id/imageLineHorizantal"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textTitleEyeColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:lineHeight="20dp"
+                    android:text="Eye Color"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/titleAppearance"
+                    app:layout_constraintTop_toBottomOf="@+id/titleAppearance"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textTitleHairColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineHeight="20dp"
+                    android:text="Hair Color"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textTitleEyeColor"
+                    app:layout_constraintTop_toBottomOf="@+id/textTitleEyeColor"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textTitleRace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineHeight="20dp"
+                    android:text="Race"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textTitleHairColor"
+                    app:layout_constraintTop_toBottomOf="@+id/textTitleHairColor"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textValueRace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginStart="10dp"
+                    android:lineHeight="20dp"
+                    android:text="Human"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textTitleRace"
+                    app:layout_constraintStart_toEndOf="@+id/textTitleRace"
+                    app:layout_constraintTop_toTopOf="@+id/textTitleRace"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/circler_view_style"
+                    android:backgroundTint="#CED5CE4D"
+                    app:layout_constraintBottom_toBottomOf="@+id/textTitleEyeColor"
+                    app:layout_constraintStart_toEndOf="@+id/textTitleEyeColor"
+                    app:layout_constraintTop_toTopOf="@+id/textTitleEyeColor" />
+
+                <View
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/circler_view_style"
+                    android:backgroundTint="#636363"
+                    app:layout_constraintBottom_toBottomOf="@+id/textTitleHairColor"
+                    app:layout_constraintStart_toEndOf="@+id/textTitleHairColor"
+                    app:layout_constraintTop_toTopOf="@+id/textTitleHairColor" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_card_biography"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginHorizontal="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/card_style">
+
+                <TextView
+                    android:id="@+id/textValueName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Spider - Man"
+                    android:textColor="@color/secondColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textValueFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="known as Richard Millhouse"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textValueName"
+                    app:layout_constraintTop_toBottomOf="@+id/textValueName"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textValueBirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:lineHeight="20dp"
+                    android:text="Scarsdale, Arizona"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textTitleBirth"
+                    app:layout_constraintStart_toEndOf="@+id/textTitleBirth"
+                    app:layout_constraintTop_toTopOf="@+id/textTitleBirth"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textTitleBirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:lineHeight="20dp"
+                    android:text="Place Of Birth"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="@+id/textValueFullName"
+                    app:layout_constraintTop_toBottomOf="@+id/textValueFullName"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textValueFirstApperance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:lineHeight="20dp"
+                    android:text="ales of Suspense #75"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textTitleFirstApperance"
+                    app:layout_constraintStart_toEndOf="@+id/textTitleFirstApperance"
+                    app:layout_constraintTop_toTopOf="@+id/textTitleFirstApperance"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textTitleFirstApperance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="First Appearance"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textTitleBirth"
+                    app:layout_constraintTop_toBottomOf="@+id/textTitleBirth"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineHeight="20dp"
+                    android:text="Work"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textTitleFirstApperance"
+                    app:layout_constraintTop_toBottomOf="@+id/textTitleFirstApperance"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txtValueWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:lineHeight="20dp"
+                    android:text="Agent of SHIELD"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/work"
+                    app:layout_constraintStart_toEndOf="@+id/work"
+                    app:layout_constraintTop_toTopOf="@+id/work"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ImageButton
+                android:id="@+id/btnNext"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/btn_style"
@@ -123,153 +479,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-<!--
-        <ImageView
-            android:id="@+id/super_hero_image"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/ic_launcher_background" />
-
-        <TextView
-            android:id="@+id/super_hero_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin3x"
-            android:textColor="@color/black"
-            android:textSize="@dimen/txt4x"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/super_hero_image"
-            tools:text="super hero name" />
-
-        <TextView
-            android:id="@+id/background1"
-            android:layout_width="300dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="@dimen/margin3x"
-            android:background="@drawable/biograohy_shape"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/super_hero_name" />
-
-        <View
-            android:id="@+id/background2"
-            android:layout_width="32dp"
-            android:layout_height="80dp"
-            android:background="@drawable/biography_shape_of_text"
-            app:layout_constraintBottom_toBottomOf="@+id/background1"
-            app:layout_constraintStart_toEndOf="@id/background1" />
-
-        <TextView
-            android:id="@+id/biography_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="@dimen/padding1x"
-            android:gravity="fill"
-            android:rotation="-90"
-            android:text="@string/biography"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/background2"
-            app:layout_constraintTop_toTopOf="@+id/background2"
-            app:layout_constraintStart_toStartOf="@id/background2"
-            app:layout_constraintEnd_toEndOf="@id/background2" />
-
-        <TextView
-            android:id="@+id/super_hero_place_of_birth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="@dimen/txt2x"
-            android:layout_marginTop="@dimen/margin2x"
-            app:layout_constraintStart_toStartOf="@+id/super_hero_full_name"
-            app:layout_constraintTop_toBottomOf="@+id/super_hero_full_name"
-            tools:text="place of birth" />
-
-        <TextView
-            android:id="@+id/super_hero_gender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="@dimen/txt2x"
-            android:layout_marginTop="@dimen/margin2x"
-            app:layout_constraintStart_toStartOf="@+id/super_hero_full_name"
-            app:layout_constraintTop_toBottomOf="@+id/super_hero_place_of_birth"
-            tools:text="gender" />
-
-        <TextView
-            android:id="@+id/super_hero_full_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="@dimen/txt2x"
-            android:layout_marginStart="@dimen/margin3x"
-            android:layout_marginTop="@dimen/margin3x"
-            app:layout_constraintStart_toStartOf="@+id/background1"
-            app:layout_constraintTop_toTopOf="@+id/background1"
-            tools:text="super hero full name" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <FrameLayout
-        android:id="@+id/bottomSheetSuperHero"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|top"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_remove" />
-
-        <include
-            layout="@layout/bottom_sheet_superhero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp" />
-
-    </FrameLayout>-->
-
-    <!--    <TextView-->
-<!--        android:id="@+id/super_hero_weight"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="@dimen/margin1x"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="@dimen/txt2x"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/super_hero_height"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/super_hero_height"-->
-<!--        tools:text="weight" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/super_hero_eye_color"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="@dimen/margin1x"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="@dimen/txt2x"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/super_hero_height"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/super_hero_height"-->
-<!--        tools:text="Eye color" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/super_hero_hair_color"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="@dimen/margin1x"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="@dimen/txt2x"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/super_hero_eye_color"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/super_hero_eye_color"-->
-<!--        tools:text="Hair color" />-->
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
