@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="195dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="195dp"
     android:layout_marginHorizontal="20dp"
     android:layout_marginTop="50dp"
-    android:paddingBottom="15dp"
-    android:background="@drawable/card_style">
+    android:background="@drawable/card_style"
+    android:paddingBottom="15dp">
 
     <TextView
         android:id="@+id/textView7"
@@ -24,70 +24,34 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="4dp"
-        android:layout_marginHorizontal="35dp"
-        app:cpb_background_progressbar_color="#ccc"
-        app:cpb_background_progressbar_width="10dp"
-        app:cpb_progress_max="100"
-        android:progress="50"
-        app:trackColor="#EAEAEA"
-        app:indicatorColor="@color/secondColor"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        tools:ignore="HardcodedText" />
-
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:lineHeight="20dp"
         android:text="Speed"
+        android:layout_marginTop="8dp"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:ignore="HardcodedText" />
-
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:id="@+id/progress"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="4dp"
-        android:layout_marginHorizontal="35dp"
-        app:cpb_background_progressbar_color="#ccc"
-        app:cpb_background_progressbar_width="10dp"
-        app:cpb_progress_max="100"
-        android:progress="50"
-        app:trackColor="#EAEAEA"
-        app:indicatorColor="@color/secondColor"
-        app:cpb_progressbar_color="@color/secondColor"
-        app:cpb_progressbar_width="5dp"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:lineHeight="20dp"
         android:layout_marginTop="8dp"
+        android:lineHeight="20dp"
         android:text="Power"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/progress"
+        app:layout_constraintStart_toStartOf="@+id/progress"
+        app:layout_constraintTop_toBottomOf="@+id/progress"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -100,59 +64,63 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/progress"
-        tools:ignore="HardcodedText" />
-
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:id="@+id/progress1"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="35dp"
-        android:layout_marginTop="4dp"
-        android:progress="50"
-        app:cpb_background_progressbar_color="#ccc"
-        app:cpb_background_progressbar_width="10dp"
-        app:cpb_progress_max="100"
-        app:cpb_progressbar_color="@color/secondColor"
-        app:cpb_progressbar_width="5dp"
-        app:indicatorColor="@color/secondColor"
-        app:layout_constraintStart_toStartOf="@+id/progress"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:trackColor="#EAEAEA"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:lineHeight="20dp"
-        android:text="Strength"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="@+id/progress1"
+        app:layout_constraintStart_toStartOf="@+id/progress1"
         app:layout_constraintTop_toBottomOf="@+id/progress1"
         tools:ignore="HardcodedText" />
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:id="@+id/progress2"
-        android:layout_width="match_parent"
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
         android:layout_height="10dp"
         android:layout_gravity="center"
-        android:layout_marginHorizontal="35dp"
-        android:layout_marginTop="4dp"
-        android:progress="50"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        android:progress="60"
         app:cpb_background_progressbar_color="#ccc"
         app:cpb_background_progressbar_width="10dp"
         app:cpb_progress_max="100"
+        app:indicatorColor="@color/secondColor"
+        app:layout_constraintEnd_toStartOf="@+id/progress"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:trackColor="#EAEAEA"
+        tools:ignore="HardcodedText" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progress"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:progress="50"
+        app:cpb_background_progressbar_color="#EFEFEF"
+        app:cpb_background_progressbar_width="6dp"
+        app:cpb_progress="80"
+        app:cpb_progress_max="100"
+        app:cpb_progressbar_color="@color/secondColor"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/progress1"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:trackColor="#EAEAEA" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress1"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="35dp"
+        android:progress="45"
+        app:cpb_background_progressbar_width="10dp"
+        app:cpb_progress_max="100"
+        app:cpb_background_progressbar_color="#ccc"
         app:cpb_progressbar_color="@color/secondColor"
         app:cpb_progressbar_width="5dp"
         app:indicatorColor="@color/secondColor"
-        app:layout_constraintStart_toStartOf="@+id/progress1"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/progress"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
         app:trackColor="#EAEAEA"
         tools:ignore="HardcodedText" />
 
