@@ -34,4 +34,5 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
             .addToBackStack(null)
             .commit()
     }
+
 }
