@@ -17,10 +17,8 @@ class MainPresenter(private val view: IMainView) {
                     is Status.Success -> view.bindData(data = response.responseData)
                     is Status.Loading -> view.onLoading()
                     is Status.Error -> view.onError()
+                }
             }
         }
     }
-}
-
-
 }

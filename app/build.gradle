@@ -1,12 +1,14 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
 
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
 
     compileSdk 31
@@ -65,5 +67,7 @@ dependencies {
     //circular progressbar library
     implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
 
+    //Custom search view library
+    implementation 'com.github.iammert:MultiSearchView:0.3'
 
 }

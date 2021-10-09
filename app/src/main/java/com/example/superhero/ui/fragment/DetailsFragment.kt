@@ -15,6 +15,7 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>() {
     }
 
     private fun initBottomSheet() {
+
         BottomSheetBehavior.from(binding.bottomSheetSuperHero).apply {
             peekHeight = 200
             state = BottomSheetBehavior.STATE_EXPANDED
@@ -23,7 +24,5 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>() {
 
     override fun callBack() {
     }
-
-
 
 }

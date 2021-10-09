@@ -39,14 +39,16 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="30dp"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="15dp"
-        android:drawableLeft="@drawable/ic_baseline_search_24"
-        android:hint="Search"
         android:background="@drawable/edit_text_style"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:hint="Search"
+        android:minHeight="48dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/super_heroes"
@@ -82,7 +84,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/hero_recycler_view"
         android:layout_width="match_parent"
