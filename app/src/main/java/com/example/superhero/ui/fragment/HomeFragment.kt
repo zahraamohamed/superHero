@@ -20,7 +20,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(),ITransferData {
         binding.apply {
             data.results?.let { result ->
                 superHeroes.adapter = HeroAdapter(result,this@HomeFragment)
-
             }
         }
     }
