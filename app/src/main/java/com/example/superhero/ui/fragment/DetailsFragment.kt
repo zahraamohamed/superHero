@@ -45,10 +45,6 @@ class DetailsFragment: BaseFragment<FragmentDetailsBinding>() {
                     width.text= appearance?.weight?.get(1).toString()
                     textValueGender.text=appearance?.gender
 
-                    numberPower.text=powerstats?.power
-                    numberSpeed.text=powerstats?.speed
-                    numberStrengt.text=powerstats?.strength
-
                     progressValuePower.progress= powerstats?.power?.toFloat()!!
                     progressValueSpeed.progress=powerstats?.speed?.toInt()!!
                     progressValueStrength.progress=powerstats?.strength?.toInt()!!
