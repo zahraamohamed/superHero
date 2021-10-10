@@ -13,41 +13,235 @@
         <ImageView
             android:id="@+id/hero_image"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="150dp"
             android:scaleType="centerCrop"
             android:src="@drawable/unnamed"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="290dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_layout"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="331dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout">
 
             <LinearLayout
+                android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginHorizontal="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="@dimen/margin2x"
                 android:background="@drawable/card_transparent_style"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/card_transparent_style"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="horizontal" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_card_appearance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/card_style"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageHumanBody"
+                    android:layout_width="100dp"
+                    android:layout_height="170dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/human_body_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.47" />
+
+                <ImageView
+                    android:id="@+id/imageLineVertical"
+                    android:layout_width="20dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageHumanBody"
+                    app:layout_constraintEnd_toStartOf="@+id/imageHumanBody"
+                    app:layout_constraintTop_toTopOf="@+id/imageHumanBody"
+                    app:layout_constraintVertical_bias="0.58" />
+
+                <ImageView
+                    android:id="@+id/imageLineHorizantal"
+                    android:layout_width="80dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_line_horizantal"
+                    app:layout_constraintEnd_toEndOf="@+id/imageHumanBody"
+                    app:layout_constraintStart_toStartOf="@+id/imageHumanBody"
+                    app:layout_constraintTop_toBottomOf="@+id/imageHumanBody" />
+
+                <TextView
+                    android:id="@+id/titleAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin4x"
+                    android:text="Appearance"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/imageHumanBody"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:lineHeight="20dp"
+                    android:text="203 cm"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageLineVertical"
+                    app:layout_constraintEnd_toStartOf="@+id/imageLineVertical"
+                    app:layout_constraintTop_toTopOf="@+id/imageLineVertical"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="20dp"
+                    android:text="441 kg"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageLineHorizantal"
+                    app:layout_constraintStart_toStartOf="@+id/imageLineHorizantal"
+                    app:layout_constraintTop_toBottomOf="@+id/imageLineHorizantal"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textTitleEyeColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/margin4x"
+                    android:lineHeight="20dp"
+                    android:text="Eye Color"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/titleAppearance"
+                    app:layout_constraintTop_toTopOf="@+id/imageHumanBody"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textTitleHairColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineHeight="20dp"
+                    android:text="Hair Color"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textTitleEyeColor"
+                    app:layout_constraintTop_toBottomOf="@+id/textTitleEyeColor"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textTitleGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineHeight="20dp"
+                    android:text="Gender"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textTitleHairColor"
+                    app:layout_constraintTop_toBottomOf="@+id/textTitleHairColor"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textValueRace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginStart="10dp"
+                    android:lineHeight="20dp"
+                    android:text="male"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textTitleGender"
+                    app:layout_constraintStart_toEndOf="@+id/textTitleGender"
+                    app:layout_constraintTop_toTopOf="@+id/textTitleGender"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/circler_view_style"
+                    android:backgroundTint="#CED5CE4D"
+                    app:layout_constraintBottom_toBottomOf="@+id/textTitleEyeColor"
+                    app:layout_constraintStart_toEndOf="@+id/textTitleEyeColor"
+                    app:layout_constraintTop_toTopOf="@+id/textTitleEyeColor" />
+
+                <View
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/circler_view_style"
+                    android:backgroundTint="#636363"
+                    app:layout_constraintBottom_toBottomOf="@+id/textTitleHairColor"
+                    app:layout_constraintStart_toEndOf="@+id/textTitleHairColor"
+                    app:layout_constraintTop_toTopOf="@+id/textTitleHairColor" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_card_powerstats"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="15dp"
-                android:layout_marginHorizontal="25dp"
+                android:background="@drawable/card_style"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@drawable/card_style">
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:id="@+id/textTitlePowerstats"
@@ -55,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="@dimen/margin4x"
                     android:text="Powerstats"
                     android:textColor="@color/black"
                     android:textSize="19sp"
@@ -108,13 +302,72 @@
                     app:layout_constraintTop_toBottomOf="@+id/progressValueStrength"
                     tools:ignore="HardcodedText" />
 
+                <TextView
+                    android:id="@+id/numberSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineHeight="20dp"
+                    android:text="100"
+                    android:textColor="@color/gray"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/progressValueSpeed"
+                    app:layout_constraintStart_toStartOf="@+id/progressValueSpeed"
+                    app:layout_constraintTop_toBottomOf="@+id/textTitleSpeed"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin4x"
+                    android:lineHeight="20dp"
+                    android:text="the powerState of your hero"
+                    android:textColor="@color/gray"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/numberPower"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/numberPower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineHeight="20dp"
+                    android:text="100"
+                    android:textColor="@color/gray"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/progressValuePower"
+                    app:layout_constraintStart_toStartOf="@+id/progressValuePower"
+                    app:layout_constraintTop_toBottomOf="@+id/textTitlePower"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/numberStrengt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineHeight="20dp"
+                    android:text="100"
+                    android:textColor="@color/gray"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/progressValueStrength"
+                    app:layout_constraintStart_toStartOf="@+id/progressValueStrength"
+                    app:layout_constraintTop_toBottomOf="@+id/textTitleStrengt"
+                    tools:ignore="HardcodedText" />
+
                 <com.google.android.material.progressindicator.CircularProgressIndicator
                     android:id="@+id/progressValueSpeed"
                     android:layout_width="wrap_content"
                     android:layout_height="10dp"
                     android:layout_gravity="center"
                     android:layout_marginHorizontal="40dp"
-                    android:layout_marginTop="55dp"
+                    android:layout_marginTop="65dp"
                     android:progress="60"
                     app:cpb_background_progressbar_color="#ccc"
                     app:cpb_background_progressbar_width="10dp"
@@ -142,7 +395,7 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/progressValuePower"
                     app:layout_constraintTop_toTopOf="@+id/progressValueSpeed"
-                    app:trackColor="#EAEAEA"/>
+                    app:trackColor="#EAEAEA" />
 
                 <com.mikhaellopez.circularprogressbar.CircularProgressBar
                     android:id="@+id/progressValuePower"
@@ -158,185 +411,34 @@
                     app:layout_constraintEnd_toStartOf="@+id/progressValueStrength"
                     app:layout_constraintStart_toEndOf="@+id/progressValueSpeed"
                     app:trackColor="#EAEAEA" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_card_appearance"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginHorizontal="25dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@drawable/card_style">
-
-                <ImageView
-                    android:id="@+id/imageHumanBody"
-                    android:layout_width="80dp"
-                    android:layout_height="130dp"
-                    android:layout_marginEnd="45dp"
-                    android:src="@drawable/human_body_2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.47" />
-
-                <ImageView
-                    android:id="@+id/imageLineVertical"
-                    android:layout_width="20dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_line"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageHumanBody"
-                    app:layout_constraintEnd_toStartOf="@+id/imageHumanBody"
-                    app:layout_constraintTop_toTopOf="@+id/imageHumanBody"
-                    app:layout_constraintVertical_bias="0.58" />
-
-                <ImageView
-                    android:id="@+id/imageLineHorizantal"
-                    android:layout_width="80dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/ic_line_horizantal"
-                    app:layout_constraintEnd_toEndOf="@+id/imageHumanBody"
-                    app:layout_constraintStart_toStartOf="@+id/imageHumanBody"
-                    app:layout_constraintTop_toBottomOf="@+id/imageHumanBody" />
-
-                <TextView
-                    android:id="@+id/titleAppearance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Appearance"
-                    android:textColor="@color/black"
-                    android:textSize="19sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:lineHeight="20dp"
-                    android:text="203 cm"
-                    android:textColor="@color/black"
-                    android:textSize="13dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageLineVertical"
-                    app:layout_constraintEnd_toStartOf="@+id/imageLineVertical"
-                    app:layout_constraintTop_toTopOf="@+id/imageLineVertical"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:lineHeight="20dp"
-                    android:text="441 kg"
-                    android:textColor="@color/black"
-                    android:textSize="13dp"
-                    app:layout_constraintEnd_toEndOf="@+id/imageLineHorizantal"
-                    app:layout_constraintStart_toStartOf="@+id/imageLineHorizantal"
-                    app:layout_constraintTop_toBottomOf="@+id/imageLineHorizantal"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/textTitleEyeColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="25dp"
-                    android:lineHeight="20dp"
-                    android:text="Eye Color"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/titleAppearance"
-                    app:layout_constraintTop_toBottomOf="@+id/titleAppearance"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/textTitleHairColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:lineHeight="20dp"
-                    android:text="Hair Color"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/textTitleEyeColor"
-                    app:layout_constraintTop_toBottomOf="@+id/textTitleEyeColor"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/textTitleRace"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:lineHeight="20dp"
-                    android:text="Race"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/textTitleHairColor"
-                    app:layout_constraintTop_toBottomOf="@+id/textTitleHairColor"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/textValueRace"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_marginStart="10dp"
-                    android:lineHeight="20dp"
-                    android:text="Human"
-                    android:textSize="15sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textTitleRace"
-                    app:layout_constraintStart_toEndOf="@+id/textTitleRace"
-                    app:layout_constraintTop_toTopOf="@+id/textTitleRace"
-                    tools:ignore="HardcodedText" />
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="13dp"
-                    android:layout_height="13dp"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/circler_view_style"
-                    android:backgroundTint="#CED5CE4D"
-                    app:layout_constraintBottom_toBottomOf="@+id/textTitleEyeColor"
-                    app:layout_constraintStart_toEndOf="@+id/textTitleEyeColor"
-                    app:layout_constraintTop_toTopOf="@+id/textTitleEyeColor" />
-
-                <View
-                    android:layout_width="13dp"
-                    android:layout_height="13dp"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/circler_view_style"
-                    android:backgroundTint="#636363"
-                    app:layout_constraintBottom_toBottomOf="@+id/textTitleHairColor"
-                    app:layout_constraintStart_toEndOf="@+id/textTitleHairColor"
-                    app:layout_constraintTop_toTopOf="@+id/textTitleHairColor" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_card_biography"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="15dp"
-                android:layout_marginHorizontal="25dp"
+                android:background="@drawable/card_style"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@drawable/card_style">
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <TextView
+                    android:id="@+id/hint2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="20dp"
+                    android:text="the Bio of your hero"
+                    android:textColor="@color/gray"
+                    android:textSize="17sp"
+                    android:layout_marginTop="54dp"
+                    app:layout_constraintTop_toBottomOf="@+id/work"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/textValueName"
@@ -344,7 +446,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="@dimen/margin4x"
                     android:text="Spider - Man"
                     android:textColor="@color/secondColor"
                     android:textSize="24sp"
@@ -357,6 +459,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/margin1x"
                     android:text="known as Richard Millhouse"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/textValueName"
@@ -384,9 +487,9 @@
                     android:layout_marginTop="15dp"
                     android:lineHeight="20dp"
                     android:text="Place Of Birth"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/textValueFullName"
                     app:layout_constraintTop_toBottomOf="@+id/textValueFullName"
                     tools:ignore="HardcodedText" />
@@ -408,9 +511,9 @@
                     android:id="@+id/textTitleFirstApperance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin2x"
                     android:lineHeight="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="First Appearance"
+                    android:text="Publisher"
                     android:textColor="@color/black"
                     android:textSize="17sp"
                     android:textStyle="bold"
@@ -422,7 +525,7 @@
                     android:id="@+id/work"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/margin2x"
                     android:lineHeight="20dp"
                     android:text="Work"
                     android:textColor="@color/black"
@@ -447,18 +550,19 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
             <ImageButton
                 android:id="@+id/btnNext"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/btn_style"
                 android:src="@drawable/ic_baseline_arrow_forward_24"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.83"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.187" />
+                app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                tools:ignore="NotSibling" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

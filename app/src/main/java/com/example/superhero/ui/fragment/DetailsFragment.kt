@@ -1,8 +1,13 @@
 package com.example.superhero.ui.fragment
 
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.WindowManager
+import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat.getColor
 import com.bumptech.glide.Glide
+import com.example.superhero.R
 import com.example.superhero.databinding.FragmentDetailsBinding
 import com.example.superhero.model.responce.Result
 import com.example.superhero.util.AddDisplayProperties
@@ -14,12 +19,17 @@ class DetailsFragment: BaseFragment<FragmentDetailsBinding>() {
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentDetailsBinding
         get() = FragmentDetailsBinding::inflate
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun setup() {
         showHeroInDetailsFragment()
         checkCardsAndDisplay()
-    }
 
-    private fun showHeroInDetailsFragment() {
+
+        }
+
+
+        private fun showHeroInDetailsFragment() {
+
         val heroItem: Result?
         arguments?.let { bundle ->
             heroItem = bundle.getParcelable(Constant.RECYCLER_DATA_KEY)
@@ -27,6 +37,16 @@ class DetailsFragment: BaseFragment<FragmentDetailsBinding>() {
                 heroItem?.apply {
                     Glide.with(root.context).load(image?.url)
                         .into(heroImage)
+
+                    textValueBirth.text=biography?.placeOfBirth
+                    textValueFirstApperance.text=biography?.publisher
+                    textValueFullName.text=biography?.fullName
+                    txtValueWork.text=work?.occupation
+
+
+
+
+
                 }
             }
         }

@@ -1,6 +1,9 @@
 package com.example.superhero.ui.activities
 
+import android.os.Build
 import android.view.LayoutInflater
+import android.view.WindowManager
+import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import com.example.superhero.R
 import com.example.superhero.databinding.ActivityHomeBinding
@@ -39,7 +42,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
     override fun setVisibility(visible: Boolean, isLoading: Boolean) {
 
         binding.fragmentContainer.isVisible = visible
-
+        binding.search.isVisible=!visible
         binding.apply {
             search.isVisible = !visible
             loading.isVisible = !visible
@@ -56,9 +59,23 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun setup() {
         presenter.getHeroResult(" ")
         searchHeroName()
+
+        //set status bar color transparent
+            window.statusBarColor = getColor(android.R.color.transparent)
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                window.setDecorFitsSystemWindows(false)
+            } else {
+                window.setFlags(
+                    WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                    WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+                )
+
+            }
     }
 
     override fun callBack() {}
