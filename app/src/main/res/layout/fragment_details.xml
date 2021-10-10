@@ -27,6 +27,7 @@
             android:layout_height="600dp"
             android:background="@drawable/gradient_layout"
             android:orientation="horizontal"
+
             app:layout_constraintVertical_bias="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,9 +38,10 @@
             android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
             android:layout_height="325dp"
-            android:layout_marginBottom="25dp"
+            app:layout_constraintVertical_bias="0.9"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hero_image">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
@@ -47,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="35dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="15dp"
                 android:background="@drawable/card_transparent_style"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +62,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="25dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="15dp"
                 android:background="@drawable/card_transparent_style"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +76,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="50dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="24dp"
                 android:background="@drawable/card_style"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -211,7 +213,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="50dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/card_style"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -376,9 +378,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="50dp"
-                android:visibility="gone"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/card_style"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
