@@ -23,10 +23,7 @@ class DetailsFragment: BaseFragment<FragmentDetailsBinding>() {
     override fun setup() {
         showHeroInDetailsFragment()
         checkCardsAndDisplay()
-
-
         }
-
 
         private fun showHeroInDetailsFragment() {
 
@@ -41,11 +38,20 @@ class DetailsFragment: BaseFragment<FragmentDetailsBinding>() {
                     textValueBirth.text=biography?.placeOfBirth
                     textValueFirstApperance.text=biography?.publisher
                     textValueFullName.text=biography?.fullName
-                    txtValueWork.text=work?.occupation
+                    textValueName.text=name
+                    txtValueWork.text=biography?.alignment
 
+                    height.text= appearance?.height?.get(1).toString()
+                    width.text= appearance?.weight?.get(1).toString()
+                    textValueGender.text=appearance?.gender
 
+                    numberPower.text=powerstats?.power
+                    numberSpeed.text=powerstats?.speed
+                    numberStrengt.text=powerstats?.strength
 
-
+                    progressValuePower.progress= powerstats?.power?.toFloat()!!
+                    progressValueSpeed.progress=powerstats?.speed?.toInt()!!
+                    progressValueStrength.progress=powerstats?.strength?.toInt()!!
 
                 }
             }

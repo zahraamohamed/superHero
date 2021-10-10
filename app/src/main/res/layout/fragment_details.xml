@@ -124,7 +124,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/height"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
@@ -138,7 +138,7 @@
                     tools:ignore="HardcodedText" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/width"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:lineHeight="20dp"
@@ -194,7 +194,7 @@
                     tools:ignore="HardcodedText" />
 
                 <TextView
-                    android:id="@+id/textValueRace"
+                    android:id="@+id/textValueGender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
@@ -208,7 +208,7 @@
                     tools:ignore="HardcodedText" />
 
                 <View
-                    android:id="@+id/view"
+                    android:id="@+id/eyeColor"
                     android:layout_width="13dp"
                     android:layout_height="13dp"
                     android:layout_marginStart="10dp"
@@ -219,6 +219,7 @@
                     app:layout_constraintTop_toTopOf="@+id/textTitleEyeColor" />
 
                 <View
+                    android:id="@+id/hairColor"
                     android:layout_width="13dp"
                     android:layout_height="13dp"
                     android:layout_marginStart="10dp"
@@ -527,7 +528,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin2x"
                     android:lineHeight="20dp"
-                    android:text="Work"
+                    android:text="aligment"
                     android:textColor="@color/black"
                     android:textSize="17sp"
                     android:textStyle="bold"
@@ -540,9 +541,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
+                    android:paddingStart="8dp"
                     android:lineHeight="20dp"
-                    android:text="Agent of SHIELD"
+                    android:text="good"
                     android:textSize="14sp"
+                    android:maxEms="16"
+                    android:maxLines="2"
                     app:layout_constraintBottom_toBottomOf="@+id/work"
                     app:layout_constraintStart_toEndOf="@+id/work"
                     app:layout_constraintTop_toTopOf="@+id/work"
