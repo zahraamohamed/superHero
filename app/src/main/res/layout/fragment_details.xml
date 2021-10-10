@@ -24,7 +24,8 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="560dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="250dp"
             android:background="@drawable/gradient_layout"
             android:orientation="horizontal"
             app:layout_constraintVertical_bias="0"
@@ -43,8 +44,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/hero_image">
 
-
-
             <LinearLayout
                 android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
@@ -57,7 +56,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
-
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
@@ -120,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="@dimen/margin4x"
+                    android:layout_marginTop="25dp"
                     android:text="Appearance"
                     android:textColor="@color/black"
                     android:textSize="19sp"
@@ -207,7 +205,7 @@
                     android:layout_marginStart="10dp"
                     android:lineHeight="20dp"
                     android:text="male"
-                    android:textSize="15sp"
+                    android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="@+id/textTitleGender"
                     app:layout_constraintStart_toEndOf="@+id/textTitleGender"
                     app:layout_constraintTop_toTopOf="@+id/textTitleGender"
@@ -237,8 +235,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_card_powerstats"
                 android:layout_width="match_parent"
@@ -257,7 +253,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="@dimen/margin4x"
+                    android:layout_marginTop="25dp"
                     android:text="Powerstats"
                     android:textColor="@color/black"
                     android:textSize="19sp"
@@ -318,7 +314,7 @@
                     android:lineHeight="20dp"
                     android:text="the powerState of your hero"
                     android:textColor="@color/gray"
-                    android:textSize="17sp"
+                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textTitlePower"
@@ -375,6 +371,7 @@
                     app:layout_constraintStart_toEndOf="@+id/progressValueSpeed"
                     app:trackColor="#EAEAEA" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_card_biography"
                 android:layout_width="match_parent"
@@ -396,7 +393,7 @@
                     android:lineHeight="20dp"
                     android:text="the Bio of your hero"
                     android:textColor="@color/gray"
-                    android:textSize="17sp"
+                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/work"
@@ -436,7 +433,9 @@
                     android:lineHeight="20dp"
                     android:text="Scarsdale, Arizona"
                     android:textSize="17sp"
+                    app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintBottom_toBottomOf="@+id/textTitleBirth"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textTitleBirth"
                     app:layout_constraintTop_toTopOf="@+id/textTitleBirth"
                     tools:ignore="HardcodedText" />
@@ -464,7 +463,9 @@
                     android:lineHeight="20dp"
                     android:text="ales of Suspense #75"
                     android:textSize="17sp"
+                    app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintBottom_toBottomOf="@+id/textTitleFirstApperance"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textTitleFirstApperance"
                     app:layout_constraintTop_toTopOf="@+id/textTitleFirstApperance"
                     tools:ignore="HardcodedText" />

@@ -11,7 +11,6 @@
         <!-- Customize your theme here. -->
     </style>
 
-
     <style name="SplashScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_super_hero_dark</item>
         <item name="android:statusBarColor">@color/black</item>
