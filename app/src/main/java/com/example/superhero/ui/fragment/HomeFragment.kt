@@ -12,6 +12,7 @@ import com.example.superhero.ui.adapter.HeroAdapter
 import com.example.superhero.ui.adapter.SliderTransformer
 import com.example.superhero.util.Constant
 
+// TODO: 10/11/2021 - where is the presenter for home fragment 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(), IHomeListener {
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentHomeBinding

@@ -5,6 +5,7 @@ import com.example.superhero.model.responce.SuperheroResponce
 import com.google.gson.Gson
 import okhttp3.Response
 
+// TODO: 10/11/2021 - Response Class have an ambiguous name response of what???
 class Response : IResponse {
 
     val gson = Gson()

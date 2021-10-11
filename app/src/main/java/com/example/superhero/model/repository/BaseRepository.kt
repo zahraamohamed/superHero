@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
+// TODO: 10/11/2021 - it’s better to change base repository into interface
 abstract class BaseRepository {
     abstract fun getHeroData(query: String):Flow<Status<SuperheroResponce>>
 }

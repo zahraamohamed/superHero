@@ -13,6 +13,7 @@ import com.example.superhero.ui.IMainView
 import com.example.superhero.ui.fragment.HomeFragment
 import com.iammert.library.ui.multisearchviewlib.MultiSearchView
 
+// TODO: 10/11/2021 - why is almost of your logic is done inside the Activity. 
 class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
 
     override val theme = R.style.Theme_SuperHero

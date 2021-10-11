@@ -14,6 +14,7 @@ import com.example.superhero.util.AddDisplayProperties
 import com.example.superhero.util.AddHidenProperties
 import com.example.superhero.util.Constant
 
+// TODO: 10/11/2021  - where is the presenter for home fragment
 class DetailsFragment: BaseFragment<FragmentDetailsBinding>() {
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentDetailsBinding
