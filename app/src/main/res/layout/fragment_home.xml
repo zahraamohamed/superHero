@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/root_layout"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <ImageView
         android:id="@+id/logo"
@@ -60,6 +59,5 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="RtlSymmetry"
         tools:listitem="@layout/item_hero" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
