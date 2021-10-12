@@ -9,8 +9,6 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-// TODO: 10/11/2021 Main Presenter class name is ambiguous each presenter should have a name represent which
-//data its present.
 
 // TODO: 10/11/2021 your coroutineScope is used directly without any reference, so if we have another function in
 //presenter we couldn’t use same scope, it’s better to declare it inside your presenter.
@@ -22,13 +20,12 @@ import kotlinx.coroutines.launch
 
 
 // TODO: 10/11/2021 we are wrapping our request with a state object to have a single source of truth. then why you
-//are unwrap the response state in MainPresenter and send everything to different functions in UI
+//are unwrap the response state in SuperHeroPresenter and send everything to different functions in UI
 //layer. 
 
 // TODO: 10/11/2021 - you need to add base presenter and make all presenters extend it 
 
-class MainPresenter(private val view: IMainView) {
-
+class SuperHeroPresenter(private val view: IMainView) {
     var repository = MainRepository()
     fun getHeroResult(query: String) {
         CoroutineScope(Dispatchers.Main).launch {
