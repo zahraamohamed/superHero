@@ -7,22 +7,22 @@ import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import com.example.superhero.R
 import com.example.superhero.databinding.ActivityHomeBinding
+import com.example.superhero.model.Status
 import com.example.superhero.model.responce.SuperheroResponce
-import com.example.superhero.presenter.MainPresenter
-import com.example.superhero.ui.IMainView
+import com.example.superhero.presenter.SuperHeroPresenter
+import com.example.superhero.ui.IMainActivityView
 import com.example.superhero.ui.fragment.HomeFragment
 import com.iammert.library.ui.multisearchviewlib.MultiSearchView
 
 // TODO: 10/11/2021 - why is almost of your logic is done inside the Activity. 
-class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
+class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainActivityView {
 
     override val theme = R.style.Theme_SuperHero
 
     override val inflate: (LayoutInflater) -> ActivityHomeBinding
         get() = ActivityHomeBinding::inflate
 
-    private val presenter = MainPresenter(this)
-
+    private val presenter = SuperHeroPresenter(this)
 
     override fun onLoading() {
         setVisibility(false)
@@ -31,6 +31,13 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), IMainView {
     override fun onError() {
         setVisibility(visible = false, isLoading = false)
     }
+
+    override fun onDataCollected(response: Status<SuperheroResponce>) {
+        when (response) {
+            is Status.Success -> this.onSuccess(data = response.responseData)
+            is Status.Loading -> this.onLoading()
+            is Status.Error -> this.onError()
+        }    }
 
     override fun onSuccess(data: SuperheroResponce) {
         setVisibility(true)
